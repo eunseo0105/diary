@@ -3,7 +3,6 @@ package com.es.diary_1
 import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
 import android.widget.Button
 import android.widget.DatePicker
 import android.widget.EditText
@@ -34,10 +33,10 @@ class MainActivity : AppCompatActivity() {
         var cDay = cal.get(Calendar.DAY_OF_MONTH)
 
 
-        val fileName1 = (Integer.toString(cYear) + "_"
+        fName = (Integer.toString(cYear) + "_"
                 + Integer.toString(cMonth + 1) + "_"
                 + Integer.toString(cDay) + ".txt")
-        val str1 = readDiary(fileName1)
+        val str1 = readDiary(fName)
         edtDiary.setText(str1)
         btnWrite.isEnabled = true
 
